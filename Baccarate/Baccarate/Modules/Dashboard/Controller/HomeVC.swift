@@ -95,7 +95,7 @@ public class HomeVC: UIViewController {
             }
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         isGameRoomCellClicked = false
         super.viewWillAppear(animated)
         roomList.removeAll()
@@ -232,13 +232,13 @@ public class HomeVC: UIViewController {
             webSocket = nil
         }
     }
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
 }
 // MARK: Sidemenu Delegate
 extension HomeVC: SideMenuNavigationControllerDelegate, SideMenuDelegate {
-    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
+    public func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
         blurEffectView.removeFromSuperview()
     }
     func menuSelectedAt(index: Int) {
@@ -373,16 +373,16 @@ extension HomeVC: SideMenuNavigationControllerDelegate, SideMenuDelegate {
 }
 // MARK: Room Table Delegate & Datasource Methods
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return casinoCellHeight
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return roomList.count
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RoomTVCell {
             cell.tag = indexPath.section
             cell.casinoTabledata = roomList[indexPath.section]
@@ -392,7 +392,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Goto Game Room ViewController
         let data = roomList[indexPath.section]
         if data.status != nil && data.status == 0 {
@@ -405,12 +405,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             self.showAlert(withTitle: "Alert".localizable, message: "The Internet connection appears to be offline.")
         }
     }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
         footerView.backgroundColor = .clear
         return footerView
     }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 8
     }
 }

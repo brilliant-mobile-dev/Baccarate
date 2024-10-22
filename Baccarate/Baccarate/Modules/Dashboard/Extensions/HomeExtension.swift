@@ -9,22 +9,22 @@ import Foundation
 import SocketRocket
 // swiftlint:disable superfluous_disable_command cyclomatic_complexity function_body_length
 extension HomeVC: SRWebSocketDelegate {
-    func webSocket(_ webSocket: SRWebSocket, didReceivePingWith data: Data?) {
+    public func webSocket(_ webSocket: SRWebSocket, didReceivePingWith data: Data?) {
         totalwaitingSocketTime = 0
     }
-    func webSocket(_ webSocket: SRWebSocket, didReceivePong pongData: Data?) {
+    public func webSocket(_ webSocket: SRWebSocket, didReceivePong pongData: Data?) {
     }
-    func webSocketDidOpen(_ webSocket: SRWebSocket) {
+    public func webSocketDidOpen(_ webSocket: SRWebSocket) {
         totalwaitingSocketTime = 0
     }
-    func webSocket(_ webSocket: SRWebSocket, didFailWithError error: Error) {
+    public func webSocket(_ webSocket: SRWebSocket, didFailWithError error: Error) {
         if NetworkMonitor.shared.isConnected {
             self.callSocketLobby()
         }
     }
-    func webSocket(_ webSocket: SRWebSocket, didCloseWithCode code: Int, reason: String?, wasClean: Bool) {
+    public func webSocket(_ webSocket: SRWebSocket, didCloseWithCode code: Int, reason: String?, wasClean: Bool) {
     }
-    func webSocket(_ webSocket: SRWebSocket, didReceiveMessageWith string: String) {
+    public func webSocket(_ webSocket: SRWebSocket, didReceiveMessageWith string: String) {
         print("didReceiveMessageWith ==>", string)
         totalwaitingSocketTime = 0
         do {
@@ -176,7 +176,7 @@ extension HomeVC: LanguageSelectionDelegate, ValidBetDelegate {
     }
 }
 extension HomeVC: UIPopoverPresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController,
+    public func adaptivePresentationStyle(for controller: UIPresentationController,
                                    traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none // 3
     }
