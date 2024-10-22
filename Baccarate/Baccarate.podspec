@@ -10,8 +10,10 @@ Pod::Spec.new do |spec|
   spec.author             = { "Rith" => "rith@lomatechnology.com" }
   spec.platform     = :ios, "15.0"
   spec.source       = { :git => "https://github.com/brilliant-mobile-dev/Baccarate.git", :tag => spec.version.to_s }
-  spec.source_files  = "Baccarate/**/*.{swift}"
   spec.swift_versions = "5.0"
+  spec.source_files = "Baccarate/**/*.{swift,m,h}"
+  spec.resources    = "Baccarate/**/*.{xcassets,json,png,jpeg,plist,storyboard}"
+  
   spec.static_framework = true
   spec.dependency "Alamofire"
   spec.dependency 'MBProgressHUD'
