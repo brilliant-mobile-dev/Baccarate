@@ -1,0 +1,80 @@
+# Xcode
+# User-specific files
+xcuserdata/
+*.xcuserstate
+
+# Workspace and project settings
+*.xcworkspace
+*.xcsettings
+*.xccheckout
+*.xcscmblueprint
+
+# Build output
+build/
+DerivedData/
+
+# Index files
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+/.build/
+*.swiftpm
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/*.lock
+
+# Flutter specific
+.flutter-plugins
+.packages
+.flutter-plugins-dependencies
+.flutter-*
+
+# Archives
+*.xcarchive
+
+# App Bundles
+*.app
+*.framework
+*.appex
+
+# Other
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
+# Generated files
+*.pbxproj
+
+# Documentation
+docs/docsets
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Xcode Instruments generated files
+*.trace
+
+# macOS specific files
+.DS_Store
+*.lock
