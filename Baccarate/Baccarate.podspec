@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Baccarate"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "This is the best framework"
   spec.description  = "I have no idea what to write as a description"
 
