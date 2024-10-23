@@ -1,10 +1,9 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Baccarate"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "This is the best framework"
   spec.description  = "I have no idea what to write as a description"
-
   spec.homepage     = "https://github.com/brilliant-mobile-dev/Baccarate"
   spec.license      = "MIT"
   spec.author       = { "Rith" => "rith@lomatechnology.com" }
@@ -18,6 +17,7 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.requires_arc = true
   spec.static_framework = true
+  
   # Install dependency
   spec.dependency "Alamofire"
   spec.dependency 'MBProgressHUD'
