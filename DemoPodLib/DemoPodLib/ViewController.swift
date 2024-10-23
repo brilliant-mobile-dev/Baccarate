@@ -6,15 +6,22 @@
 //
 
 import UIKit
+import Baccarate
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("-- Demo App --")
+        Validator.sayHello()
     }
 
-
+    @IBAction func tapNext(_ sender: Any) {
+        print("-- tapNext -- ")
+        let podBundle = Bundle(for: HomeVC.self)
+        let story = UIStoryboard(name: "Storyboard", bundle: podBundle)
+        let vc = story.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

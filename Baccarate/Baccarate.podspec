@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/brilliant-mobile-dev/Baccarate.git", :tag => spec.version.to_s }
   spec.swift_versions = "5.0"
   spec.source_files = "Baccarate/**/*.{swift,m,h}"
-  spec.resources    = "Baccarate/**/*.{xcassets,json,png,jpeg,plist,storyboard}"
+  spec.resources    = "Baccarate/**/*.{xcassets,json,png,jpeg,plist,storyboard,xib}"
   
   spec.static_framework = true
   spec.dependency "Alamofire"

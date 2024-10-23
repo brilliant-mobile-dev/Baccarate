@@ -25,7 +25,7 @@ final class NetworkMonitor {
     static let shared = NetworkMonitor()
     private let queue = DispatchQueue(label: "NetworkConnectivityMonitor")
     private let monitor: NWPathMonitor
-    private(set) var isConnected = false
+    private(set) var isConnected = true
     private(set) var isExpensive = false
     private(set) var currentConnectionType: NWInterface.InterfaceType?
 
