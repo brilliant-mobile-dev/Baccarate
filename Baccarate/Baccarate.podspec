@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Baccarate"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "This is the best framework"
   spec.description  = "I have no idea what to write as a description"
   spec.homepage     = "https://github.com/brilliant-mobile-dev/Baccarate"
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "15.0"
 #  spec.ios.deployment_target = '8.0'
   spec.source       = { :git => "https://github.com/brilliant-mobile-dev/Baccarate.git", :tag => spec.version.to_s }
-  spec.swift_versions = "5.4"
+  spec.swift_versions = "5.10"
   spec.source_files = "Baccarate/**/*.{swift,m,h}"
   spec.resources    = "Baccarate/**/*.{xcassets,json,png,jpeg,plist,storyboard,xib,strings}"
   spec.requires_arc = true
