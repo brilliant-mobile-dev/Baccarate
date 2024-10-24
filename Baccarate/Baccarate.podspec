@@ -7,25 +7,30 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/brilliant-mobile-dev/Baccarate"
   spec.license      = "MIT"
   spec.author       = { "Rith" => "rith@lomatechnology.com" }
- # spec.platform     = :ios, "15.0"
-  spec.ios.deployment_target = '13.0'
   spec.source       = { :git => "https://github.com/brilliant-mobile-dev/Baccarate.git", :tag => spec.version.to_s }
-  spec.swift_versions = "5.10"
+  spec.swift_versions = "5.0"
   spec.source_files = "Baccarate/**/*.{swift,m,h}"
   spec.resources    = "Baccarate/**/*.{xcassets,json,png,jpeg,plist,storyboard,xib,strings}"
   spec.requires_arc = true
   spec.static_framework = true
   spec.framework  = "Foundation"
-  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-#  spec.public_header_files = "#{s.name}/**/#{s.name}/include/*.h"
-#  spec.subspec "Crash" do |crash|
-#      crash.source_files = "Baccarate/**/*.{swift,m,h}"
-#      crash.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-#      crash.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-#  end
-  
+  spec.cocoapods_version = '>= 1.15.2'
+  spec.ios.deployment_target = '15.0'
+
   # Install dependency
-    # spec.dependency "Alamofire"
+  spec.dependency "Alamofire"
+  spec.dependency 'MBProgressHUD'
+  spec.dependency 'SocketRocket'
+  spec.dependency 'SpreadsheetView'
+  spec.dependency 'SDWebImage'
+  spec.dependency 'IQKeyboardManagerSwift', '~> 6.1.1'
+  spec.dependency 'DropDown'
+  spec.dependency 'MarqueeLabel'
+  spec.dependency 'lottie-ios'
+  spec.dependency 'SideMenu'
+  spec.dependency 'ZFPlayer', '~> 4.0'
+  spec.dependency 'ZFPlayer/ControlView', '~> 4.0'
+  spec.dependency 'ZFPlayer/AVPlayer', '~> 4.0'
+  spec.dependency 'ZFPlayer/ijkplayer', '~> 4.0'
 
 end
